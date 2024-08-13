@@ -18,8 +18,8 @@ async def root():
 
 
 # region Rag
-@app.post('/fetch_answer_using_collections')
-async def fetch_answer_using_collections(
+@app.post('/memory_test')
+async def memory_test(
             rag_data: transfer_data_models.FetchAnswerUsingCollections):
     answer_fetcher = RagProcessor.RagProcessor()
     status = await answer_fetcher.fetch_answer_from_rag_using_collections(
