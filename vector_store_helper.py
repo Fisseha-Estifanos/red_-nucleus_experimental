@@ -28,10 +28,10 @@ async def initialize_vector_store(embedding_model_name: str,
                 qdrant_url = os.environ["QDRANT_LOCAL_URL"]
                 qdrant_client = QdrantClient(url=qdrant_url, timeout=120)
             else:
-                qdrant_url = os.environ["QDRANT_CLOUD_URL_RIZZBUZZ"]
+                qdrant_url = os.environ["QDRANT_CLOUD_URL"]
                 qdrant_client = QdrantClient(
                     url=qdrant_url, timeout=120,
-                    api_key=os.environ['QDRANT_API_KEY_RIZZBUZZ'])
+                    api_key=os.environ['QDRANT_API_KEY'])
             qdrant_vector_store = Qdrant(
                 client=qdrant_client, collection_name=collection_name,
                 embeddings=embedding_model)
