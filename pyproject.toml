@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "red-nucleus-experimental"
+version = "0.1.0"
+description = ""
+authors = ["fisseha-estifanos <fisseha.137@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.10.14"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
